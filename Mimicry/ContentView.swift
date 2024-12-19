@@ -61,9 +61,9 @@ struct ContentView: View {
               expand.toggle()
             }
           }) {
-            Color.blue
-              .cornerRadius(15)
+            RoundedRectangle(cornerRadius: 15.0)
               .matchedGeometryEffect(id: "shape", in: animationNamespace)
+              .foregroundColor(Color.blue)
               .frame(
                 width: !expand ? 100 : 380,
                 height: !expand ? 50 : 300
