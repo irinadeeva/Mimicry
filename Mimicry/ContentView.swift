@@ -68,9 +68,9 @@ struct ContentView: View {
                   Text("Open")
                     .padding()
                 }
+                  .matchedGeometryEffect(id: "text", in: animationNamespace, properties: .position, anchor: .leading)
                   .font(.headline)
                   .foregroundColor(.white)
-                  .matchedGeometryEffect(id: "text", in: animationNamespace, properties: .position, anchor: .leading)
               )
           }
         }
