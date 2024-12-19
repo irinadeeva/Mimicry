@@ -18,14 +18,10 @@ struct ContentView: View {
         RoundedRectangle(cornerRadius: 30.0)
           .matchedGeometryEffect(id: "shape", in: animationNamespace)
           .foregroundColor(Color.blue)
-          .frame(
-            width: expand ? 380 : 100,
-            height: expand ? 300 : 50
-          )
+          .frame(width: 380, height: 300)
 
         VStack(alignment: .center) {
           HStack {
-
             Button(action: {
               withAnimation {
                 expand.toggle()
@@ -41,8 +37,10 @@ struct ContentView: View {
               .bold()
               .padding()
             }
+
             Spacer()
           }
+
           Spacer()
         }
         .padding()
@@ -64,10 +62,7 @@ struct ContentView: View {
             RoundedRectangle(cornerRadius: 15.0)
               .matchedGeometryEffect(id: "shape", in: animationNamespace)
               .foregroundColor(Color.blue)
-              .frame(
-                width: !expand ? 100 : 380,
-                height: !expand ? 50 : 300
-              )
+              .frame(width: 100, height: 50)
               .overlay(
                 HStack {
                   Text("Open")
